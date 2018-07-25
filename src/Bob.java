@@ -24,6 +24,5 @@ public class Bob {
             System.out.println(whatever);
         }
 
-
     }
 }

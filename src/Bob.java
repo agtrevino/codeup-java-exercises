@@ -5,7 +5,6 @@ public class Bob {
 
         Scanner sc = new Scanner(System.in);
 //      responses
-        String empty = "";
         String sure = "Sure.";
         String chillOut = "Whoa, chill out!";
         String fine = "Fine. Be that way!";
@@ -13,11 +12,15 @@ public class Bob {
 
         System.out.println("Say something to Bob.");
 
-        int userInput = sc.nextInt();
+        String userInput = sc.nextLine().trim();
 
-        if (userInput.equals(empty)){
+        if (userInput.endsWith("?")){
+            System.out.println(sure);
+        } else if (userInput.endsWith("!") || userInput.equals(userInput.toUpperCase())){
+            System.out.println(chillOut);
+        } else if (userInput.toUpperCase().equals("BOB") || userInput.isEmpty()){
             System.out.println(fine);
-        }else {
+        } else {
             System.out.println(whatever);
         }
 

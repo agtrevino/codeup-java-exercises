@@ -95,6 +95,22 @@ public class HelloWorld {
 //        int x = 5;
 //        System.out.println(++x);
 //        System.out.println(x);
+
+
+//        Rewrite the following expressions using the relevant shorthand assignment operators:
+//
+//
+//        int x = 4;
+//        x = x + 5;
+//
+//        int x = 3;
+//        int y = 4;
+//        y = y * x;
+//
+//        int x = 10;
+//        int y = 2;
+//        x = x / y;
+//        y = y - x;
     }
 
 }

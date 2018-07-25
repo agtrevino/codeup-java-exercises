@@ -65,7 +65,7 @@ public class ControlFlowExercises {
 
         System.out.println("What number would you like to go up to?");
 
-        int myNum = sc.nextInt();
+//        int myNum = sc.nextInt();
     }
 
 }

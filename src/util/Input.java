@@ -24,7 +24,7 @@ public class Input {
         return yesNo();
     }
 
-    private int getInt(int min, int max) {
+    public int getInt(int min, int max) {
         int input = scanner.nextInt();
         if (min < input && input > max) {
             return input;
@@ -38,13 +38,26 @@ public class Input {
         return getInt(min, max);
     }
 
-    private int getInt() {
-        return scanner.nextInt();
-    }
+//    public int getInt() {
+//        return scanner.nextInt();
+//    }
 
     public int getInt(String prompt) {
         System.out.print(prompt);
         return getInt();
+    }
+
+    public int getInt(){
+        String userInput = this.getString("Give me a number");
+        int number = 0;
+        try {
+            number = Integer.valueOf(userInput);
+            System.out.println(number);
+        } catch (NumberFormatException e) {
+            System.out.println("This is not a valid number");
+            getInt();
+        }
+        return number;
     }
 
     private double getDouble(double min, double max) {
@@ -61,12 +74,23 @@ public class Input {
         return getDouble(min, max);
     }
 
-    private double getDouble() {
-        return scanner.nextDouble();
-    }
+//    private double getDouble() {
+//        return scanner.nextDouble();
+//    }
 
     public double getDouble(String prompt) {
         System.out.println(prompt);
+        return getDouble();
+    }
+
+    public double getDouble() {
+        String userInput = this.getString("Give me a decimal number");
+        try {
+           return Double.valueOf(userInput);
+        } catch (NumberFormatException e) {
+            System.out.println("This is not a valid decimal number");
+            getDouble();
+        }
         return getDouble();
     }
 
